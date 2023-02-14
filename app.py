@@ -1,10 +1,10 @@
 from datetime import datetime
 from flask import Flask, render_template, request, redirect, url_for, send_from_directory
-import requests, json, os
+import requests, json
 
 app = Flask(__name__)
+#The connection string can be found from cognitive services portal
 endpoint = "https://demo5.cognitiveservices.azure.cn/language/:query-knowledgebases?projectName=demo5&api-version=2021-10-01&deploymentName=test"
-# data = json.dumps({'question':'how to access azure cn'}) 
 headers = {'Ocp-Apim-Subscription-Key':'d2cae8cd0fd341a39ba457dcd372a7d9', 'Content-Type':'application/json'}
 
 @app.route('/')
