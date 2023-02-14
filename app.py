@@ -3,9 +3,9 @@ from flask import Flask, render_template, request, redirect, url_for, send_from_
 import requests, json
 
 app = Flask(__name__)
-#The connection string can be found from cognitive services portal
+#The connection string - API key can be found from cognitive services portal
 endpoint = "https://demo5.cognitiveservices.azure.cn/language/:query-knowledgebases?projectName=demo5&api-version=2021-10-01&deploymentName=test"
-headers = {'Ocp-Apim-Subscription-Key':'d2cae8cd0fd341a39ba457dcd372a7d9', 'Content-Type':'application/json'}
+headers = {'Ocp-Apim-Subscription-Key':'dummy', 'Content-Type':'application/json'}
 
 @app.route('/')
 def index():
